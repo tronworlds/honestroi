@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Honest ROI</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!--header icon CSS -->
+    <link rel="icon" href="assets/img/fabicon.png">
+    <!-- animations CSS -->
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <!-- font-awsome CSS -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- mobile menu CSS -->
+    <link rel="stylesheet" href="assets/css/slicknav.min.css">
+    <!--css animation-->
+    <link rel="stylesheet" href="assets/css/animation.css">
+    <!-- style CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- responsive CSS -->
+    <link rel="stylesheet" href="assets/css/responsive.css">
+  </head>
+  <body>
+    <!--header area start-->
+    <div class="header-area wow fadeInDown header-absolate" id="nav" data-0="position:fixed;" data-top-top="position:fixed;top:0;" data-edge-strategy="set">
+        <div class="container">
+            <div class="row">
+                <div class="col-4 d-block d-lg-none">
+                    <div class="mobile-menu"></div>
+                </div>
+                <div class="col-4 col-lg-3 ">
+                    <div class="logo-area">
+                        <a href="#"><img src="assets/img/logo-top.png" alt="">Honest ROI</a>
+                    </div>
+                </div>
+                <div class="col-4 col-lg-7 d-none d-lg-block">
+                    <div class="main-menu text-center">
+                        <nav>
+                            <ul id="slick-nav">
+                                <li><a class="scroll" href="#home">home</a></li>
+                                <li><a class="scroll" href="#about">About</a></li>
+                                <li><a class="scroll" href="#faq">FAQ</a></li>
+                                <li><a class="scroll" href="#contact">Contact</a></li>
+								<li><a  href="#contact">Verified contract</a></li>
+								<li><a  href="#contact">Tronscan</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>              
+            </div>
+        </div>
+    </div>
+    <!--header area end-->
+    
+    <!--welcome area start-->
+    <div class="welcome-area v2 wow fadeInUp" id="home">
+        <div id="particles-js"></div>
+        <div class="container">
+		<div class="row">
+							<div class="col-3">
+								<p>Total deposited: <b><span id="total-deposited">0</span></b> TRX</p>
+								
+							</div>
+							<div class="col-2">
+								
+								<p>Total users: <b><span id="total-users">0</span></b></p>
+							</div>
+							<div class="col-4">
+								<p>Contract balance: <b><span id="contract-balance">0</span></b> TRX</p>
+								
+							</div>
+							<div class="col-3">
+								
+								<p>Total payout: <b><span id="total-payout">0</span></b> TRX</p>
+							</div>
+						</div>
+						<div class="space-30"></div>
+            <div class="row">
+                <div class="col-12 col-lg-6 align-self-center">
+                    <div class="welcome-right">
+                        <div class="welcome-text">
+                             <h1>The honest ROI Investor Game <br />
+                            for Tron Blockchain</h1>
+                            <h4>Flat 1% daily rate till the contract balance has funds. Minimal 1% maintance fee. No fees on reinvest, no referral fees, 99% goes to the pot.</h4>
+                        </div>
+						<div class="row">
+							<div class="col-6">
+								<p>Earnings: <b><span id="user-withdrawable">0</span></b> TRX</p>
+								<a href="#" onclick="reinvestAll()" class="col-11 gradient-btn v2 mr-20" data-toggle="tooltip" data-placement="bottom" title="Minimum reinvest amount is 10 TRX. Network fee is about 0.5 TRX">Reinvest all</a>
+							</div>
+							<div class="col-6">
+								<p>Total withdrawn: <b><span id="user-total-withdrawn">0</span></b> TRX</p>
+								<a href="#" onclick="withdrawAll()"class="col-11 gradient-btn v2" data-toggle="tooltip" data-placement="bottom" title="There is no minimum withdraw amount, but Tron network charge a fee about 0.5 TRX for every withdraw">Withdraw all</a>						
+							</div>
+						</div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-5 offset-1">
+                    <div class="v2 welcome-progress">
+                        <h4 id="couner-title">Is running for</h4>
+                        <div class="progress-time">
+                            <div class="row">
+                               <div class="col">
+                                   <span id="days" class="timeOne"></span>
+                                   <h5>days</h5>
+                               </div>
+                               <div class="col">
+                                   <span id="hours" class="timeTwo"></span>
+                                   <h5>hours</h5>
+                               </div>
+                               <div class="col">
+                                   <span id="minutes" class="timeTrhee"></span>
+                                    <h5>minutes</h5>
+                               </div>
+                               <div class="col">
+                                   <span id="seconds" class="timeFour"></span>
+                                   <h5>seconds</h5>
+                               </div>
+                           </div>
+                        </div>
+                        <div class="space-10"></div>
+                        <div class="prgress-bar">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="single-prgress-w">
+                                        <p>Your daily profit:</p>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="single-prgress-w text-right">
+                                        <p><span id="user-daily-profit">0</span> TRX</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col">
+                                    <div class="single-prgress-b">
+                                        <p>Total Deposited:</p>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="single-prgress-b text-right">
+                                        <p> <span id="user-deposit">0</span> TRX</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+						<div class="input-group mb-3">
+							<div class="input-group-prepend">
+								<span class="input-group-text">TRX</span>
+							</div>
+							<input type="text" class="form-control" id="deposit-amount" value="10" style="text-align:right;">
+							<div class="input-group-append">
+								<span class="input-group-text">.00</span>
+							</div>
+						</div>						
+                        <div class="space-10"></div>
+                        <a href="#" id="deposit" class="gradient-btn" onclick="deposit()">Deposit</a>
+						<div class="space-10"></div>
+						<p>Minimum deposit: 10 TRX ( <span id="balance">0</span> TRX available )</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--welcome area end-->
+
+    <!--about area start-->
+    <div class="about-area wow fadeInUp v2" id="about">
+        <div class="container">
+            <div class="space-30"></div>
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="about-mid-img">
+                        <img src="assets/img/about-left.png" alt="">
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 align-self-center">
+                    <div class="heading">
+                        <h5>About this project</h5>
+                    </div>
+                    <div class="about-mid-text">
+                        <h1>Investor game <br />with flat daily rate</h1>
+                        <div class="space-10"></div>
+                        <p>Investor game is a kind of gambling, where you get payed daily income, as long as new people join the game. Nobody knows when the game stops.
+						The Honest ROI project accepts and pay back Tron network tokens (TRX). Its smart contract guarantees fair game, because nobody , including project creators,
+						have access to the deposited funds. You can check the contract yourself, its source code is very simple.</p>
+                    </div>
+                    <div class="space-30"></div>
+                    <a href="https://t.me/honestroi" class="gradient-btn v2 about-btn mr-20"> <i class="fab fa-telegram-plane"></i> join us on telegram</a>
+					<a href="https://discord.gg/wZfWfa2" class="gradient-btn v2 about-btn"> <i class="fab fa-discord"></i> join us on discord</a>
+                </div>
+            </div>
+        </div>
+        <div class="space-90"></div>
+    </div>
+    <!--about area end-->
+
+    <!--single about area start-->
+    <div class="single-about-area wow fadeInUp">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <a href="#about" class="single-about">
+                        <div class="single-about-img">
+                            <img src="assets/img/about-icon-1.png" alt="">
+                        </div>
+                        <div class="single-about-text">
+                            <h4>HONEST</h4>
+                            <p>one percent flat daily rate. Whether you deposited 10 TRX or 100000 TRX it is always the same 1%. No tricks to make people deposit more than they can afford.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4">
+                    <a href="#about" class="single-about">
+                        <div class="single-about-img">
+                            <img src="assets/img/about-icon-2.png" alt="">
+                        </div>
+                        <div class="single-about-text">
+                            <h4>HONEST</h4>
+                            <p>maintence fee. 1% of deposited funds only. No fees on reinvest, no referral fees, no hiden fees, just a bare minimum to keep this project running.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4">
+                    <a href="#about" class="single-about">
+                        <div class="single-about-img">
+                            <img src="assets/img/about-icon-3.png" alt="">
+                        </div>
+                        <div class="single-about-text">
+                            <h4>HONEST</h4>
+                            <p>open and verified contract. This program has very simple and straightforward contract. Everybody with basic knowlege in Solidity can audit it himself.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--single about area end-->
+
+        <!--faq area start-->
+        <div class="faq-area wow fadeInUp v2" id="faq">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center">
+                    <div class="heading">
+                        <div class="space-90"></div>
+                        <h1>Frequently Asked Questions </h1>
+                    </div>
+                    <div class="space-60"></div>
+                </div>
+                </div>
+            </div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12 col-md-10 offset-1">
+                                    <div class="faq-collups">
+                                        <div id="accordion">
+                                            <div class="card">
+                                                <div class="card-header">
+                                                    <h5 class="mb-0">
+                                                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapse1" aria-expanded="true">
+                                                    How to start earning?
+                                                    </button>
+                                                    </h5>
+                                                </div>
+
+                                                <div id="collapse1" class="collapse show" data-parent="#accordion">
+                                                <div class="card-body">
+                                                <p>Make sure that TronLink is unlocked, your account is valid and you are on the Main net.
+												Then deposit some funds: type the amount, you want to deposit into the field right above Deposit button and press Deposit. 
+												It takes about a minute for Tron blockchain to validate your deposit. Your profit will be credited to your account every hour,
+												you can withdraw or reinvest it.</p>
+												<p>And then spread the word about this game, the more people join, the longer game goes on, the more profit you get.</p>
+                                                </div>
+                                                </div>
+                                            </div>
+                                            <div class="card">
+                                                <div class="card-header">
+                                                    <h5 class="mb-0">
+                                                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapse2" aria-expanded="false">
+                                                    The risks of playing investor game?
+                                                    </button>
+                                                    </h5>
+                                                </div>
+
+                                                <div id="collapse2" class="collapse" data-parent="#accordion">
+                                                <div class="card-body">
+                                                <p>Investor game is a kind of gambling. There is no guarantee of profit, you even can lose part of your deposit if you join the game too late.
+												Never gamble more than you can afford to lose. But Honest ROI is more safe than most similar projects because, only one procent is taken from the game for maintance,
+												not 30%, not 20%, not even 5%. There is no referral fees, so people that only intresting in tricking other people into the project they don't want to play theselves,
+												can't drain the game balance.</p>
+												<p>The projects smart contract is open, verified and very straightforward. The game fairness is guaranteed by Tron network.</p>
+                                                </div>
+                                                </div>
+                                            </div>
+                                            <div class="card">
+                                                <div class="card-header">
+                                                    <h5 class="mb-0">
+                                                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapse3" aria-expanded="false">
+                                                     What is transaction fees?
+                                                    </button>
+                                                    </h5>
+                                                </div>
+
+                                                <div id="collapse3" class="collapse" data-parent="#accordion">
+                                                <div class="card-body">
+                                                <p>Tron network charge small transaction fee for every interaction with a smart contract. Every time you deposit funds, reinvest or 
+												withdraw your profit you will be charged with 0.5-1 TRX fee.</p>
+                                                </div>
+                                                </div>
+                                            </div>
+                                            <div class="card">
+                                                <div class="card-header">
+                                                    <h5 class="mb-0">
+                                                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapse4" aria-expanded="false">
+                                                    Do you have whale protection?
+                                                    </button>
+                                                    </h5>
+                                                </div>
+
+                                                <div id="collapse4" class="collapse" data-parent="#accordion">
+                                                <div class="card-body">
+                                                <p>There is no such thing as whale protection in crypto world. It doesn't matter whether somebody invests 100k in one account or creates ten acounts with 10k investment
+												and there is no way to prevent it. For this reason any withdraw caps are inefficient too. But this project offers flat rate to everybody, so the big players have no advantage over the small ones.</p>
+                                                </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+            <div class="space-90"></div>
+        </div>
+        <!--faq area end-->
+
+
+    <!--community area start-->
+    <div class="community-area v2 wow fadeInUp section-padding" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <div class="heading">
+                        <h1>Join our community</h1>
+                    </div>
+                    <div class="space-60"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="single-community text-center">
+                        <ul>
+                            <li><a class="dribbble" href="https://t.me/honestroi"><i class="fab fa-telegram-plane"></i></a></li>
+                            <li><a class="github" href="https://github.com/tronworlds/honestroi"><i class="fab fa-github"></i></a></li>
+                            <li><a class="behance" href="https://discord.gg/wZfWfa2"><i class="fab fa-discord"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="space-90"></div>
+        
+        <!--footer area start-->
+        <div class="footera-area wow fadeInDown">
+            <div class="container">
+             
+                        <div class="single-footer">
+                            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is based on the template by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+</p>
+<h5>Legal</h5>
+<p>Any individual (the 'user') understands and accepts that crypto assets do not necessarily have a specific form of protection or regulation by any governmental body. The value of these crypto assets is highly volatile and speculative, extending the possibility of total loss.</p>
+<p>You further represent and warrant that you:<br />
+a. are at least 18 years old or of other legal age, according to your relevant jurisdiction;<br />
+b. guarantee that your crypto assets, which you transfer to the honest roi smart contract are not encumbered, not in contention, or under seizure, and that neither exist any rights of third parties to your crypto assets;<br />
+c. will not use our Services or will immediately cease using those if any applicable law in your country prohibits or will prohibit you at any time from doing so;</p>
+                        </div>
+                               
+            </div>
+        </div>
+        <!--footer area end-->
+    </div>
+    <!--community area end-->
+	
+	<!-- Modal -->
+	<div class="modal fade" id="tronWalletModal" role="dialog" aria-hidden="true" tabindex="-1" style="z-index: 10000000;">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Tron wallet is not detected!</h5>
+				</div>
+				<div class="modal-body">
+					<p>For playing this game you should have Chrome browser with 
+					<a target='_blank' href='https://chrome.google.com/webstore/detail/tronlink/ibnejdfjmmkpcnlpebklmnkoeoihofec'>TronLink</a> 
+					or similar extention installed.</p><p>For a phone we recommend Math Wallet or any other wallet with a built-in browser.</p>
+					<p>Make sure that TronLink is unlocked, your account is valid and you are on the Main net.</p>
+				</div>
+				<div class="modal-footer">
+					<a href="#" class="gradient-btn" data-dismiss="modal">Close</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+    <!-- jquery 2.2.4 js-->
+    <script src="assets/js/jquery-2.2.4.min.js"></script>
+    <!-- popper js-->
+    <script src="assets/js/popper.js"></script>
+    <!-- wow js-->
+    <script src="assets/js/wow.min.js"></script>
+    <!-- bootstrap js-->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!--skroller js-->
+    <script src="assets/js/skrollr.min.js"></script>
+    <!--mobile menu js-->
+    <script src="assets/js/jquery.slicknav.min.js"></script>
+    <!--particle s-->
+    <script src="assets/js/particles.min.js"></script>
+    <!-- main js-->
+    <script src="assets/js/main.js"></script>
+	<script src="assets/js/tron.js"></script>
+
+  </body>
+</html>

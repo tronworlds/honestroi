@@ -160,7 +160,7 @@ a.single-about,
 
 .header-area {
   padding-top: 30px;
-  z-index: 99;
+  z-index: 3;
   position: relative;
   width: 100%;
 }
@@ -174,7 +174,7 @@ a.single-about,
 .main-menu li {
   display: inline-block;
   position: relative;
-  z-index: 2;
+  z-index: 4;
 }
 
 .main-menu li.active a{
@@ -193,7 +193,7 @@ a.single-about,
   position: absolute;
   left: 0;
   top: 70px;
-  z-index: 100;
+  z-index: 5;
   background: #001763;
   border-radius: 5px;
   visibility: hidden;;
@@ -237,7 +237,7 @@ a.single-about,
 }
 .welcome-area{
 	position: relative;
-	z-index: 99;
+	z-index: 1;
   padding-top: 80px;
 }
 
@@ -283,7 +283,7 @@ a.single-about,
 
 .about-area {
   position: relative;
-  z-index: 2;
+  z-index: 1;
 }
 
 .about-area::after {
@@ -299,7 +299,7 @@ a.single-about,
 }
 
 .single-about-area {
-  z-index: 2;
+  z-index: 1;
   position: relative;
 }
 

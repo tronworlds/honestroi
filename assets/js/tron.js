@@ -134,7 +134,6 @@ function setInfo(id, value) {
 }
 
 window.onload = function() {
-	console.log(window);
 	if (!!window.tronWeb) {
 		if(!window.tronWeb.ready) {
 			setTimeout(function(){

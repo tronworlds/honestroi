@@ -773,6 +773,7 @@ token area v2 css
   -webkit-transform: rotate(0deg);
   -ms-transform: rotate(0deg);
   transform: rotate(0deg);
+  z-index: -1;
 }
 
 

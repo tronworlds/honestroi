@@ -13,7 +13,7 @@ const PAYMENT_PERIOD = 6; //Shasta
 HOURLY_PROFIT_DIVIDER = 2400;
 MIN_DEPOSIT = 10;
 //const CONTRACT_ADDRESS = "TJYNMUtUeDTEQGHKQQ7ZijMkh1E2kGKg4C";
-const CONTRACT_ADDRESS = "TKVy5L9FpPNT5e6BU6A19dzS4Z9w5xYcbk"; //Shasta
+const CONTRACT_ADDRESS = "TNrw4m61TddV35o4z4Q7dbsTmNsDNpLkdi"; //Shasta
 
 var contract = false;
 

@@ -9,11 +9,9 @@ const SUN_IN_TRX = 1000000;
 const ENERGY_LIMIT = 10000000;
 
 const PAYMENT_PERIOD = 3600;
-//const PAYMENT_PERIOD = 6; //Shasta
 HOURLY_PROFIT_DIVIDER = 2400;
 MIN_DEPOSIT = 10;
 const CONTRACT_ADDRESS = "THpooKXzY49puvVJ3ufPhLnTMe62LbAvGn";
-//const CONTRACT_ADDRESS = "TNrw4m61TddV35o4z4Q7dbsTmNsDNpLkdi"; //Shasta
 
 var contract = false;
 
@@ -25,7 +23,6 @@ function getGameInfo() {
 		contract.totalPayout().call().then(result => {setInfo("total-payout", (result / SUN_IN_TRX).toFixed(2));});
 		contract.totalUsers().call().then(result => {setInfo("total-users", result);});
 		contract.totalDeposited().call().then(result => {setInfo("total-deposited", (result / SUN_IN_TRX).toFixed(2));});
-		tronWeb.trx.getBalance(CONTRACT_ADDRESS).then(result => {setInfo("contract-balance", (result / SUN_IN_TRX).toFixed(2));});
 	}
 }
 
